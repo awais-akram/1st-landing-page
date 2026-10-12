@@ -6,20 +6,47 @@ import Benefits from "@/views/Benefits";
 import Pricing from "@/views/Pricing";
 import Testimonials from "@/views/Testimonials";
 import Footer from "@/views/Footer";
+import { Toaster } from "@/components/ui/sonner";
 
-export default function App() {
+function App() {
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans">
+      {/* Top Navbar */}
       <Navbar />
-      <main>
-        <Hero />
-        <SupportSection />
-        <Features />
-        <Benefits />
-        <Pricing /> 
-        <Testimonials />
-        <Footer />
+
+      {/* Main Content with IDs for Smooth Scroll Navigation */}
+      <main className="pt-20">
+        <section id="home">
+          <Hero />
+        </section>
+
+        <section id="support">
+          <SupportSection />
+        </section>
+
+        <section id="features">
+          <Features />
+        </section>
+
+        <section id="benefits">
+          <Benefits />
+        </section>
+
+        <section id="plan">
+          <Pricing />
+        </section>
+
+        <section id="about">
+          <Testimonials />
+        </section>
       </main>
+
+      <Footer />
+
+      {/* Shadcn Sonner Toaster (Screen level floating notification) */}
+      <Toaster position="top-right" richColors />
     </div>
   );
 }
+
+export default App;

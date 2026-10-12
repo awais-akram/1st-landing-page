@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { navLinks } from "@/models/heroData";
-
+import { navLinks } from "../models/heroData.js";
 export default function Navbar() {
     return (
         <header className="w-full max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">

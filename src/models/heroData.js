@@ -1,15 +1,16 @@
 export const navLinks = [
-    { name: "Home", href: "#" },
-    { name: "Product", href: "#" },
-    { name: "FAQ", href: "#" },
-    { name: "Blog", href: "#" },
-    { name: "About Us", href: "#" },
+  { name: "Home", href: "#home" },
+  { name: "Support", href: "#support" },
+  { name: "Features", href: "#features" },
+  { name: "Benefits", href: "#benefits" },
+  { name: "Plan", href: "#plan" },
+  { name: "About", href: "#about" },
 ];
 
 export const partnerLogos = [
-    { name: "Unsplash" },
-    { name: "Notion" },
-    { name: "INTERCOM" },
-    { name: "descript" },
-    { name: "grammarly" },
+  { name: "Unsplash" },
+  { name: "Notion" },
+  { name: "INTERCOM" },
+  { name: "descript" },
+  { name: "grammarly" },
 ];

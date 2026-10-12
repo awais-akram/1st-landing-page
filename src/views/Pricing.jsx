@@ -5,7 +5,10 @@ export default function Pricing() {
   const { billingCycle, setBillingCycle, data } = usePricing();
 
   return (
-    <section className="w-full max-w-7xl mx-auto px-6 py-24">
+    <section
+      id="plan"
+      className="w-full max-w-7xl mx-auto px-6 py-24"
+    >
       {/* Title & Subtitle */}
       <div className="text-center space-y-4 mb-10">
         <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-slate-900 leading-tight whitespace-pre-line">
@@ -21,7 +24,7 @@ export default function Pricing() {
             onClick={() => setBillingCycle("monthly")}
             className={`px-6 py-2 text-xs sm:text-sm font-semibold rounded-full transition-all ${
               billingCycle === "monthly"
-                ? "bg-emerald-500 text-white shadow-sm"
+                ? "bg-white text-slate-900 shadow-sm"
                 : "text-slate-500 hover:text-slate-900"
             }`}
           >
@@ -31,7 +34,7 @@ export default function Pricing() {
             onClick={() => setBillingCycle("yearly")}
             className={`px-6 py-2 text-xs sm:text-sm font-semibold rounded-full transition-all ${
               billingCycle === "yearly"
-                ? "bg-emerald-500 text-white shadow-sm"
+                ? "bg-white text-slate-900 shadow-sm"
                 : "text-slate-500 hover:text-slate-900"
             }`}
           >
@@ -40,8 +43,8 @@ export default function Pricing() {
         </div>
       </div>
 
-      {/* 3 Pricing Cards Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch pt-6">
+      {/* 3 Pricing Cards Grid (group/cards add kiya hai) */}
+      <div className="group/cards grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch pt-6">
         {data.plans.map((plan) => {
           const isPro = plan.popular;
           const currentPrice =
@@ -50,9 +53,10 @@ export default function Pricing() {
           return (
             <div
               key={plan.id}
-              className={`relative rounded-[32px] p-8 sm:p-10 flex flex-col justify-between transition-transform duration-300 ${
+              className={`relative rounded-[32px] p-8 sm:p-10 flex flex-col justify-between transition-all duration-300 ease-out cursor-pointer group-hover/cards:scale-95 group-hover/cards:opacity-75 hover:!scale-105 hover:!opacity-100 hover:z-20 hover:shadow-2xl ${
                 isPro
-                ? "bg-emerald-500 text-white shadow-2xl mt-4"                  : "bg-white text-slate-900 border border-slate-100 shadow-sm hover:shadow-md"
+                  ? "bg-emerald-500 text-white shadow-2xl mt-4"
+                  : "bg-white text-slate-900 border border-slate-100 shadow-sm"
               }`}
             >
               {/* Top Details */}
@@ -68,7 +72,7 @@ export default function Pricing() {
 
                 {/* Price Display */}
                 <div className="pt-4 flex items-baseline justify-center">
-                  <span className="text-sm font-medium align-top mr-1">$</span>
+                  <span className="text-4xl font-bold align-top mr-1">$</span>
                   <span className="text-5xl font-extrabold tracking-tight">
                     {currentPrice}
                   </span>

@@ -9,7 +9,9 @@ import successCardImg from "@/assets/Benifit-Screen/Group 114.png";
 
 export default function Benefits() {
     return (
-        <section className="w-full max-w-7xl mx-auto px-6 lg:px-12 py-24 overflow-visible">
+        <section
+        id="benefits"
+        className="w-full max-w-7xl mx-auto px-6 lg:px-12 py-24 overflow-visible">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
 
                 {/* Left Column: Heading and Checklist */}

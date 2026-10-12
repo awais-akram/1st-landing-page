@@ -1,5 +1,5 @@
 export const supportContent = {
-  heading: "How we support our pratner all over the world",
+  heading: "How we support our Partner all over the world",
   description:
     "SaaS become a common delivery model for many business application, including office software, messaging software, payroll processing software, DBMS software, management software",
   ratings: [

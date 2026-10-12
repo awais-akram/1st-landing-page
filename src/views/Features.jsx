@@ -13,8 +13,10 @@ const cardImages = {
 
 export default function Features() {
   return (
-    <section className="w-full max-w-7xl mx-auto px-6 py-20">
-      {/* Top Header Section */}
+<section
+  id="features"
+  className="w-full max-w-7xl mx-auto px-6 py-20"
+>      {/* Top Header Section */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-16">
         <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold text-slate-900 leading-tight whitespace-pre-line">
           {featuresSectionData.title}
